@@ -1,0 +1,20 @@
+<ActionBar class="bg-slate-800">
+    <Label class="text-lg text-white" text="Edit product"></Label>
+</ActionBar>
+
+<ScrollView class="bg-slate-800">
+    @if(product.id > 0){
+        <StackLayout class="p-4 space-y-4"> 
+        <Label class="text-white text-lg mt-4" text="Title"></Label>
+        <TextField [(ngModel)]="product.title" class="text-white border-white p-3 border-2 rounded-lg"/>
+        <Label class="text-white text-lg mt-4" text="Description"></Label>
+        <TextView [(ngModel)]="product.description" class="text-white border-white p-3 border-2 rounded-lg h-32"/> 
+        <Label class="text-white text-lg mt-4" text="Price"></Label>
+        <TextField [(ngModel)]="product.price" keyboardType="number"class="text-white border-white p-3 border-2 rounded-lg"/>
+        <Label class="text-white text-lg mt-4" text="Status"></Label>
+        <TextField [(ngModel)]="product.status" class="text-white border-white p-3 border-2 rounded-lg"/>
+        <button class="mt-8 bg-green-500 h-12 rounded-xl text-white active:bg-green-600" text="Save" (tap)="onSave()"></button>
+        <button class="mt-8 bg-orange-500 h-12 rounded-xl text-white active:bg-orange-600" text="Back" (tap)="onBack()"></button>
+    </StackLayout>
+}
+</ScrollView>

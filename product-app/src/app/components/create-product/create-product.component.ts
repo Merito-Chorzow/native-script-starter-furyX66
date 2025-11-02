@@ -1,5 +1,5 @@
 import { Component, inject, NO_ERRORS_SCHEMA, OnInit } from '@angular/core';
-import {ProductService} from "../../services/product.service"
+import { ProductService } from "../../services/product.service"
 import { Router } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import {

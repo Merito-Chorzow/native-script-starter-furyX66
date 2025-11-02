@@ -23,7 +23,17 @@ export class HomeComponent implements OnInit {
     console.log(this.products)
   }
 
-  onTap(){
-    this.router.navigate(['/create']);
+  onCreate(){
+    this.router.navigate(['/create'])
+  }
+
+  onEdit(id: number){
+    console.log("id", id)
+    this.router.navigate(['/product/edit', id])
+  }
+
+  onDelete(id: number){
+    this.productService.deleteProduct(id)
+    this.products = this.productService.getProducts()
   }
 }
