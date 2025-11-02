@@ -1,0 +1,14 @@
+<ActionBar class="bg-slate-800"> 
+  <Label class="text-lg text-white" text="Product app"></Label>
+</ActionBar>
+
+<StackLayout class="bg-slate-800 p-2">
+  <button class="bg-green-500 h-12 rounded-xl text-white active:bg-green-600" text="Create new note" (tap)="onTap()"></button>
+  <ListView [items]="products">
+    <ng-template let-item="item" let-i="index">
+      <GridLayout>
+        <label [text]="item.title"></label>
+      </GridLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>

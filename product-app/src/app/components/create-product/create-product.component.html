@@ -1,0 +1,17 @@
+<ActionBar class="bg-slate-800"> 
+    <Label class="text-lg text-white" text="Create new product"></Label>
+</ActionBar>
+
+<StackLayout class="bg-slate-800 p-4 space-y-4">
+    <StackLayout verticalAlignment="center">
+        <Label class="text-white text-lg mt-4" text="Title"></Label>
+        <TextField [(ngModel)]="product.title" class="text-white border-white  p-3 border-2 rounded-lg"/>
+        <Label class="text-white text-lg mt-4" text="Description"></Label>
+        <TextField [(ngModel)]="product.description" class="text-white border-white  p-3 border-2 rounded-lg"/>
+        <Label class="text-white text-lg mt-4" text="Price"></Label>
+        <TextField [(ngModel)]="product.price" class="text-white border-white  p-3 border-2 rounded-lg" keyboardType="number"/>
+        <Label class="text-white text-lg mt-4" text="Status"></Label>
+        <TextField [(ngModel)]="product.status" class="text-white border-white p-3 border-2 rounded-lg"/>
+    </StackLayout>
+    <button class="bg-green-500 h-12 rounded-xl text-white active:bg-green-600" text="Create" (tap)="onTap()"></button>
+</StackLayout>
