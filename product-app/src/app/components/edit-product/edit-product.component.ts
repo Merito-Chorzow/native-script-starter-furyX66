@@ -1,13 +1,14 @@
-import { Component, inject, NO_ERRORS_SCHEMA, OnInit } from '@angular/core';
+import { Component, inject, NO_ERRORS_SCHEMA, OnInit } from '@angular/core'
 import { ProductService } from "../../services/product.service"
-import { Router, ActivatedRoute } from "@angular/router";
-import { FormsModule } from '@angular/forms';
+import { Haptics, HapticImpactType } from '@nativescript/haptics';
+import { Router, ActivatedRoute } from "@angular/router"
+import { FormsModule } from '@angular/forms'
 import {
 	NativeScriptCommonModule,
 	NativeScriptRouterModule,
 	NativeScriptFormsModule,
-  } from '@nativescript/angular';
-import { IProduct } from '~/app/interfaces/IProduct';
+  } from '@nativescript/angular'
+import { IProduct } from '~/app/interfaces/IProduct'
 
 @Component({
 	selector: 'edit-product',
@@ -42,10 +43,12 @@ export class EditProductComponent implements OnInit {
     }
 
 	onSave() {
+        Haptics.impact(HapticImpactType.LIGHT);
         this.productService.updateProduct(this.product)
         this.router.navigate(['/home'])
     }
 	onBack(){
+        Haptics.impact(HapticImpactType.LIGHT);
 		this.router.navigate(['/home'])
 	}
 }
