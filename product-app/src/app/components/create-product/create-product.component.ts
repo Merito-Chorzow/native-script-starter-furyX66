@@ -25,7 +25,7 @@ export class CreateProductComponent {
 		title: '',
 		description: '',
 		price: null as number | null,
-		status: '',
+		category: '',
 	}
 
 	onCreate(){

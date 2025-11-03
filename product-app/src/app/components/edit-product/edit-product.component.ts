@@ -26,7 +26,7 @@ export class EditProductComponent implements OnInit {
         title: '', 
         description: '', 
         price: null, 
-        status: ''
+        category: ''
     }
 
 	ngOnInit(): void {

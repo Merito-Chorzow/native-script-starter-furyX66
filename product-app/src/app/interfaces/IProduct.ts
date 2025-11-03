@@ -3,5 +3,5 @@ export interface IProduct{
     title: string;
     description: string;
     price : number;
-    status: string;
+    category: string;
 }

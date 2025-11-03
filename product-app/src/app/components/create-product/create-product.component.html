@@ -10,8 +10,8 @@
         <TextField [(ngModel)]="product.description" class="text-white border-white  p-3 border-2 rounded-xl"/>
         <Label class="text-white text-lg mt-4" text="Price"></Label>
         <TextField [(ngModel)]="product.price" class="text-white border-white  p-3 border-2 rounded-xl" keyboardType="number"/>
-        <Label class="text-white text-lg mt-4" text="Status"></Label>
-        <TextField [(ngModel)]="product.status" class="text-white border-white p-3 border-2 rounded-xl"/>
+        <Label class="text-white text-lg mt-4" text="Category"></Label>
+        <TextField [(ngModel)]="product.category" class="text-white border-white p-3 border-2 rounded-xl"/>
     </StackLayout>
     <button class="bg-green-500 h-12 rounded-xl text-white active:bg-green-600" text="Create" (tap)="onCreate()"></button>
     <button class="mt-8 bg-orange-500 h-12 rounded-xl text-white active:bg-orange-600" text="Back" (tap)="onBack()"></button>
